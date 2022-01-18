@@ -3,12 +3,12 @@
 #include <juce_audio_processors/juce_audio_processors.h>
 
 //==============================================================================
-class AudioPluginAudioProcessor  : public juce::AudioProcessor
+class SimpleEQAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    AudioPluginAudioProcessor();
-    ~AudioPluginAudioProcessor() override;
+    SimpleEQAudioProcessor();
+    ~SimpleEQAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -44,5 +44,21 @@ public:
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPluginAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SimpleEQAudioProcessor)
+
+
+
+
+
+public:
+
+    static juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();   // static because it doesn't make use of any member variables
+
+    juce::AudioProcessorValueTreeState apvts { *this    // AudioProcessor &processorToConnectTo
+            , nullptr    // UndoManager *undoManager
+            , "Parameters"  // const Identifier &valueTreeType
+            , createParameterLayout()   // ParameterLayout parameterLayout
+    };
+
+
 };

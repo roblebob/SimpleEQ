@@ -16,6 +16,14 @@ cmake_minimum_required(VERSION 3.15)
 
 project(SimpleEQ VERSION 0.0.1)
 
+
+
+# SELF-----------------------------------------------------------
+set(CMAKE_CXX_STANDARD 17)
+# /SELF----------------------------------------------------------
+
+
+
 # If you've installed JUCE somehow (via a package manager, or directly using the CMake install
 # target), you'll need to tell this project that it depends on the installed copy of JUCE. If you've
 # included JUCE directly in your source tree (perhaps as a submodule), you'll need to tell CMake to
@@ -37,7 +45,7 @@ find_package(JUCE CONFIG REQUIRED)        # If you've installed JUCE to your sys
 # the formats specified by the FORMATS arguments. This function accepts many optional arguments.
 # Check the readme at `docs/CMake API.md` in the JUCE repo for the full list.
 
-juce_add_plugin(AudioPluginExample
+juce_add_plugin(SimpleEQ
     # VERSION ...                               # Set this if the plugin version is different to the project version
     # ICON_BIG ...                              # ICON_* arguments specify a path to an image file to use as an icon for the Standalone
     # ICON_SMALL ...
@@ -67,7 +75,7 @@ juce_add_plugin(AudioPluginExample
 # Finally, we supply a list of source files that will be built into the target. This is a standard
 # CMake command.
 
-target_sources(AudioPluginExample
+target_sources(SimpleEQ
     PRIVATE
         PluginEditor.cpp
         PluginProcessor.cpp)
@@ -79,7 +87,7 @@ target_sources(AudioPluginExample
 # definitions will be visible both to your code, and also the JUCE module code, so for new
 # definitions, pick unique names that are unlikely to collide! This is a standard CMake command.
 
-target_compile_definitions(AudioPluginExample
+target_compile_definitions(SimpleEQ
     PUBLIC
         # JUCE_WEB_BROWSER and JUCE_USE_CURL would be on by default, but you might not need them.
         JUCE_WEB_BROWSER=0  # If you remove this, add `NEEDS_WEB_BROWSER TRUE` to the `juce_add_plugin` call
@@ -101,7 +109,7 @@ target_compile_definitions(AudioPluginExample
 # linked automatically. If we'd generated a binary data target above, we would need to link to it
 # here too. This is a standard CMake command.
 
-target_link_libraries(AudioPluginExample
+target_link_libraries(SimpleEQ
     PRIVATE
         # AudioPluginData           # If we'd created a binary data target, we'd link to it here
         juce::juce_audio_utils
