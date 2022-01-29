@@ -65,7 +65,7 @@
           uiLastY_Normal="120" uiopen_Normal="0">
     <PLUGIN name="SimpleEQ" format="VST3" category="Fx" manufacturer="yourcompany"
             version="0.0.1" file="/home/roblebob/SimpleEQ/cmake-build-debug/SimpleEQ_artefacts/Debug/VST3/SimpleEQ.vst3"
-            uniqueId="970487f5" isInstrument="0" fileTime="17e9ff1b160" infoUpdateTime="17ea001f560"
+            uniqueId="970487f5" isInstrument="0" fileTime="17e9ff1b160" infoUpdateTime="17ea02ff72e"
             numInputs="2" numOutputs="2" isShell="0" uid="83a6e647"/>
     <STATE>191.VMjLgXK....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOVMEUy.Ea0cVZtMEcgQWY9vSRC8Vav8lak4Fc9XCLt3hKt3hKt3hKt3hYRUUSTEETIckVwTjQisVTTgkdEYjKAQjYPQSPWgUdMcjKAQjct3hdA4hKt3hKt3hKtnTUv.UQAslXuk0UXoWUFE0YQcEV77RRC8Vav8lak4Fc9vyKVMEUy.Ea0cVZtMEcgQWY9..</STATE>
     <LAYOUT>
